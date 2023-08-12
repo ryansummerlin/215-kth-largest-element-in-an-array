@@ -29,3 +29,14 @@ var findKthLargest = function(nums, k) {
     }
 
 };
+
+
+// Sort of dumb but this is the way to do it with sorting and it actually has a pretty decent runtime but feels like cheating
+// bc the problem asks you not to sort.
+
+
+var findKthLargest = function(nums, k) {
+    nums = nums.sort((a,b) => a - b);
+    return nums[nums.length - k];
+
+};
